@@ -1,41 +1,33 @@
-# 🔁 Recursion:Palindrome Checker Using Recursion in Python
+# # 🔁 Recursion:Sum of Digits using Recursion in Python
 
 ## 🎯 AIM:
-To write a Python program to check whether a given string is a **palindrome** using **recursion**.
-
----
+To write a Python program to calculate the **sum of all digits** in a number using **recursion**.
 
 ## 🧠 ALGORITHM:
 
 1. **Start**
-2. Define a recursive function `is_palindrome(word)`
-   - **Base Case:** If the string length is less than 1, return `True`
-   - **Recursive Case:** If the first and last characters match, call the function recursively on the substring without first and last characters
-   - Else, return `False`
-3. Get input from the user
-4. Call the recursive function
-5. Print whether the string is a palindrome
+2. Define a recursive function `sum_digit(n)` that:
+   - Returns 0 if `n <= 0` (Base Case)
+   - Else, returns `n % 10 + sum_digit(n // 10)` (Recursive Case)
+3. Take integer input from the user.
+4. Call the recursive function and store the result.
+5. Print the result.
 6. **Stop**
-
----
 
 ## 💻 PROGRAM:
 ```
-  def is_palindrome(word):
-      if len(word) <= 1:
-          return True
-      else:
-          return word
-
-  str=input()
-  if str==str[::-1]:
-      print("String is a palindrome")
-  else:
-      print("String is not a palindrome")
+l=[]
+def SUM(n):
+   if n==0:
+      return 1
+dig=n%10
+l.append(dig)
+SUM(n//10)
+n=int(input())
+SUM(n) print(sum(l))
 ```
 ## OUTPUT
-<img width="626" height="261" alt="442670732-373e1f74-b1a3-4205-b424-37fb2b52447a" src="https://github.com/user-attachments/assets/34cf4c4a-27df-4a7c-9f5d-a8e093b367b2" />
+<img width="1172" height="212" alt="442052734-2164457f-bc53-4484-8abc-42c3ab314603" src="https://github.com/user-attachments/assets/c9522828-e009-408a-ab94-c377403ada5c" />
 
 ## RESULT
-Thus, the program has been execueted successfully.
-
+Program successfully verified.
